@@ -25,8 +25,39 @@ document.querySelector('form').addEventListener('submit', (event) => {
 
   console.log(myLibrary);
 
-  console.log(`${bookTitle}, by ${bookAuthor} is a ${bookGenre} book. Read ? ${isRead}`)
+  console.log(`Title : ${bookTitle}, Author : ${bookAuthor}, Genre : ${bookGenre}, isRead ${isRead}.`)
+
+  const addedBookGrid = document.createElement('div');
+
+  addedBookGrid.classList.add('book');
+  addedBookGrid.classList.add('flex');
+  addedBookGrid.classList.add('column');
+
+  const addedBookGridTitleSpan = document.createElement('span');
+  addedBookGridTitleSpan.textContent = bookTitle;
+  addedBookGridTitleSpan.classList.add('book-title');
+
+  const addedBookGridAuthorSpan = document.createElement('span');
+  addedBookGridAuthorSpan.textContent = bookAuthor;
+  addedBookGridAuthorSpan.classList.add('book-author');
+
+  const addedBookGridGenreSpan = document.createElement('span');
+  addedBookGridGenreSpan.textContent = bookGenre;
+  addedBookGridGenreSpan.classList.add('book-genre');
+
+  const addedBookGridRemoveButton = document.createElement('button');
+  addedBookGridRemoveButton.textContent = 'Remove';
+  addedBookGridRemoveButton.type = 'button';
+  addedBookGridRemoveButton.classList.add('remove-button');
+
+  document.querySelector('.books').appendChild(addedBookGrid);
+  addedBookGrid.appendChild(addedBookGridTitleSpan);
+  addedBookGrid.appendChild(addedBookGridAuthorSpan);
+  addedBookGrid.appendChild(addedBookGridGenreSpan);
+  addedBookGrid.appendChild(addedBookGridRemoveButton);
 })
+
+
 
 function Book(title, author, genre, isRead) {
   this.title = title;
@@ -38,6 +69,3 @@ function Book(title, author, genre, isRead) {
 function addBookToLibrary() {
 
 }
-/*
-const newBook = new Book('One Piece', 'Oda', 'Shonen', '0000', '0000', 'Japanese');
-*/

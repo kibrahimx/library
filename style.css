@@ -24,7 +24,7 @@ form {
 }
 
 .books {
-    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
     gap: 20px 20px;
 }
