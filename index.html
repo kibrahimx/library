@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./reset.css">
+    <script src="./app.js" defer></script>
     <title>Library</title>
 </head>
 <body>
@@ -13,32 +14,11 @@
         <input type="text" id="book-title" placeholder="Title" required>
         <input type="text" id="book-author" placeholder="Author" required>
         <input type="text" id="book-genre" placeholder="Genre" required>
-        <input class="read-checkbox" type="checkbox" id="read-checkbox">
+        <input class="book-status" type="checkbox" id="book-status">
         <button type="submit" id="submit-book-button">Add</button>
     </form>
     <main>
         <button type="button" id="add-book-button">+ Add a book</button>
-        <div class="books grid">
-            <div class="book flex column">
-                <span class="book-title">Title : The Lord of the Rings</span>
-                <span class="book-author">Author : J. R. R. Tolkien</span>
-                <span class="book-genre">Genre : High fantasy, Adventure</span>
-                <button class="remove-button" type="button">Remove</button>
-            </div>
-            <div class="book flex column">
-                <span class="book-title">Title : The Lord of the Rings</span>
-                <span class="book-author">Author : J. R. R. Tolkien</span>
-                <span class="book-genre">Genre : High fantasy, Adventure</span>
-                <button class="remove-button" type="button">Remove</button>
-            </div>
-            <div class="book flex column">
-                <span class="book-title">Title : The Lord of the Rings</span>
-                <span class="book-author">Author : J. R. R. Tolkien</span>
-                <span class="book-genre">Genre : High fantasy, Adventure</span>
-                <button class="remove-button" type="button">Remove</button>
-            </div>
-        </div>
     </main>
 </body>
-<script src="./app.js"></script>
 </html>
